@@ -8,4 +8,4 @@ About the project:
 
 The reason I created this project is to list all files under the certain directory with the style in the picture.
 
-![screenshots](https://github.com/anuoQ/PrintFileTree/tree/master/Screenshots/1.png)
+![the directory tree printed screenshots shown here](https://github.com/anuoQ/PrintFileTree/tree/master/Screenshots/1.png)
