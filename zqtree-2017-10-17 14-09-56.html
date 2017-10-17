@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>zqtree</title>
+    <link href="C:/_tree/treelibs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="C:/_tree/treelibs/zTree_v3/css/metroStyle/metroStyle.css" rel="stylesheet">
+</head>
+
+<body style="padding:50px 100px;margin-bottom:200px"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">ZQTree</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-2 control-label">文件列表</div>
+                <div class="col-sm-10">
+                    <ul id="tree" class="ztree"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="C:/_tree/treelibs/jquery.min.js"></script>
+    <!--ztree-->
+    <script src="C:/_tree/treelibs/zTree_v3/js/jquery.ztree.all.min.js"></script>
+
+    <script type="text/javaScript">
+            var json = {
+                "treelist": [
+
+	                {
+	                    "id": 1,
+	                    "name": "Tree",
+	                    "parentId": -1,
+	                }, 
+	                {
+	                    "id": 2,
+	                    "name": ".classpath",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 3,
+	                    "name": ".project",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 4,
+	                    "name": ".settings",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 5,
+	                    "name": "org.eclipse.jdt.core.prefs",
+	                    "parentId": 4,
+	                }, 
+	                {
+	                    "id": 6,
+	                    "name": "bin",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 7,
+	                    "name": "top",
+	                    "parentId": 6,
+	                }, 
+	                {
+	                    "id": 8,
+	                    "name": "qiaojianyong",
+	                    "parentId": 7,
+	                }, 
+	                {
+	                    "id": 9,
+	                    "name": "qtree",
+	                    "parentId": 8,
+	                }, 
+	                {
+	                    "id": 10,
+	                    "name": "dao",
+	                    "parentId": 9,
+	                }, 
+	                {
+	                    "id": 11,
+	                    "name": "UserDao.class",
+	                    "parentId": 10,
+	                }, 
+	                {
+	                    "id": 12,
+	                    "name": "pojo",
+	                    "parentId": 9,
+	                }, 
+	                {
+	                    "id": 13,
+	                    "name": "Address.class",
+	                    "parentId": 12,
+	                }, 
+	                {
+	                    "id": 14,
+	                    "name": "User.class",
+	                    "parentId": 12,
+	                }, 
+	                {
+	                    "id": 15,
+	                    "name": "util",
+	                    "parentId": 9,
+	                }, 
+	                {
+	                    "id": 16,
+	                    "name": "FileWrapper$1.class",
+	                    "parentId": 15,
+	                }, 
+	                {
+	                    "id": 17,
+	                    "name": "FileWrapper.class",
+	                    "parentId": 15,
+	                }, 
+	                {
+	                    "id": 18,
+	                    "name": "QTree.class",
+	                    "parentId": 15,
+	                }, 
+	                {
+	                    "id": 19,
+	                    "name": "file.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 20,
+	                    "name": "src",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 21,
+	                    "name": "top",
+	                    "parentId": 20,
+	                }, 
+	                {
+	                    "id": 22,
+	                    "name": "qiaojianyong",
+	                    "parentId": 21,
+	                }, 
+	                {
+	                    "id": 23,
+	                    "name": "qtree",
+	                    "parentId": 22,
+	                }, 
+	                {
+	                    "id": 24,
+	                    "name": "dao",
+	                    "parentId": 23,
+	                }, 
+	                {
+	                    "id": 25,
+	                    "name": "UserDao.java",
+	                    "parentId": 24,
+	                }, 
+	                {
+	                    "id": 26,
+	                    "name": "pojo",
+	                    "parentId": 23,
+	                }, 
+	                {
+	                    "id": 27,
+	                    "name": "Address.java",
+	                    "parentId": 26,
+	                }, 
+	                {
+	                    "id": 28,
+	                    "name": "User.java",
+	                    "parentId": 26,
+	                }, 
+	                {
+	                    "id": 29,
+	                    "name": "util",
+	                    "parentId": 23,
+	                }, 
+	                {
+	                    "id": 30,
+	                    "name": "FileWrapper.java",
+	                    "parentId": 29,
+	                }, 
+	                {
+	                    "id": 31,
+	                    "name": "QTree.java",
+	                    "parentId": 29,
+	                }, 
+	                {
+	                    "id": 32,
+	                    "name": "test2",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 33,
+	                    "name": "tree-2017-10-17 12-49-38.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 34,
+	                    "name": "tree-2017-10-17 12-49-41.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 35,
+	                    "name": "tree-2017-10-17 12-49-43.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 36,
+	                    "name": "tree-2017-10-17 12-49-59.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 37,
+	                    "name": "tree-2017-10-17 12-50-01.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 38,
+	                    "name": "tree-2017-10-17 13-53-59.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 39,
+	                    "name": "tree-2017-10-17 13-59-45.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 40,
+	                    "name": "tree-2017-10-17 14-02-55.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 41,
+	                    "name": "tree-2017-10-17 14-03-14.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 42,
+	                    "name": "tree-2017-10-17 14-04-58.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 43,
+	                    "name": "tree.txt",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 44,
+	                    "name": "WebContent",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 45,
+	                    "name": "css",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 46,
+	                    "name": "test",
+	                    "parentId": 45,
+	                }, 
+	                {
+	                    "id": 47,
+	                    "name": "123.txt",
+	                    "parentId": 46,
+	                }, 
+	                {
+	                    "id": 48,
+	                    "name": "test1",
+	                    "parentId": 46,
+	                }, 
+	                {
+	                    "id": 49,
+	                    "name": "abc.txt",
+	                    "parentId": 48,
+	                }, 
+	                {
+	                    "id": 50,
+	                    "name": "cba.txt",
+	                    "parentId": 48,
+	                }, 
+	                {
+	                    "id": 51,
+	                    "name": "test2",
+	                    "parentId": 46,
+	                }, 
+	                {
+	                    "id": 52,
+	                    "name": "q.txt",
+	                    "parentId": 51,
+	                }, 
+	                {
+	                    "id": 53,
+	                    "name": "test3",
+	                    "parentId": 51,
+	                }, 
+	                {
+	                    "id": 54,
+	                    "name": "test5",
+	                    "parentId": 53,
+	                }, 
+	                {
+	                    "id": 55,
+	                    "name": "123.txt",
+	                    "parentId": 54,
+	                }, 
+	                {
+	                    "id": 56,
+	                    "name": "231.txt",
+	                    "parentId": 54,
+	                }, 
+	                {
+	                    "id": 57,
+	                    "name": "321.txt",
+	                    "parentId": 54,
+	                }, 
+	                {
+	                    "id": 58,
+	                    "name": "test4",
+	                    "parentId": 51,
+	                }, 
+	                {
+	                    "id": 59,
+	                    "name": "xyz.txt",
+	                    "parentId": 58,
+	                }, 
+	                {
+	                    "id": 60,
+	                    "name": "img",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 61,
+	                    "name": "META-INF",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 62,
+	                    "name": "MANIFEST.MF",
+	                    "parentId": 61,
+	                }, 
+	                {
+	                    "id": 63,
+	                    "name": "script",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 64,
+	                    "name": "test1",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 65,
+	                    "name": "WEB-INF",
+	                    "parentId": 44,
+	                }, 
+	                {
+	                    "id": 66,
+	                    "name": "lib",
+	                    "parentId": 65,
+	                }, 
+	                {
+	                    "id": 67,
+	                    "name": "web.xml",
+	                    "parentId": 65,
+	                }, 
+	                {
+	                    "id": 68,
+	                    "name": "Wtest3",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 69,
+	                    "name": "wtest3_1",
+	                    "parentId": 68,
+	                }, 
+	                {
+	                    "id": 70,
+	                    "name": "Wtest4",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 71,
+	                    "name": "2",
+	                    "parentId": 70,
+	                }, 
+	                {
+	                    "id": 72,
+	                    "name": "1",
+	                    "parentId": 71,
+	                }, 
+	                {
+	                    "id": 73,
+	                    "name": "1",
+	                    "parentId": 72,
+	                }, 
+	                {
+	                    "id": 74,
+	                    "name": "1",
+	                    "parentId": 73,
+	                }, 
+	                {
+	                    "id": 75,
+	                    "name": "1.txt",
+	                    "parentId": 74,
+	                }, 
+	                {
+	                    "id": 76,
+	                    "name": "2.txt",
+	                    "parentId": 74,
+	                }, 
+	                {
+	                    "id": 77,
+	                    "name": "3.txt",
+	                    "parentId": 74,
+	                }, 
+	                {
+	                    "id": 78,
+	                    "name": "3",
+	                    "parentId": 70,
+	                }, 
+	                {
+	                    "id": 79,
+	                    "name": "Wtest5",
+	                    "parentId": 1,
+	                }, 
+	                {
+	                    "id": 80,
+	                    "name": "1.txt",
+	                    "parentId": 79,
+	                }, 
+	                {
+	                    "id": 81,
+	                    "name": "2.txt",
+	                    "parentId": 79,
+	                }, 
+	                {
+	                    "id": 82,
+	                    "name": "zqtree-2017-10-17 14-09-56.html",
+	                    "parentId": 1,
+	                }, 
+
+                ]
+            };
+            var option={
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: 'id',
+                        pIdKey: 'parentId',
+                        rootPId: null
+                    },
+                    key: {
+                        url: 'nourl'
+                    }
+                }
+            };
+            //加载菜单树 展开所有节点
+            $.fn.zTree.init($('#tree'),option, json.treelist).expandAll(true);
+    </script>
+    <div class="form-group">
+        <div class="col-sm-2 control-label">用时</div>
+        <div class="col-sm-10">
+   0 min 0 s 49 ms        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+─Tree
+  │ .classpath
+  │ .project
+  │ tree-2017-10-17 12-49-38.txt
+  │ tree-2017-10-17 12-49-41.txt
+  ├─.settings
+  │   org.eclipse.jdt.core.prefs
+  ├─bin
+  │  └─top
+  │     └─qiaojianyong
+  │        └─qtree
+  │           ├─dao
+  │           │   UserDao.class
+  │           ├─pojo
+  │           │   Address.class
+  │           │   User.class
+  │           └─util
+  │               FileWrapper$1.class
+  │               FileWrapper.class
+  │               QTree.class
+  ├─src
+  │  └─top
+  │     └─qiaojianyong
+  │        └─qtree
+  │           ├─dao
+  │           │   UserDao.java
+  │           ├─pojo
+  │           │   Address.java
+  │           │   User.java
+  │           └─util
+  │               FileWrapper.java
+  │               QTree.java
+  ├─test2
+  ├─WebContent
+  │  ├─css
+  │  │  └─test
+  │  │     │ 123.txt
+  │  │     ├─test1
+  │  │     │   abc.txt
+  │  │     │   cba.txt
+  │  │     └─test2
+  │  │        │ q.txt
+  │  │        ├─test3
+  │  │        │  └─test5
+  │  │        │      123.txt
+  │  │        │      231.txt
+  │  │        │      321.txt
+  │  │        └─test4
+  │  │            xyz.txt
+  │  ├─img
+  │  ├─META-INF
+  │  │   MANIFEST.MF
+  │  ├─script
+  │  ├─test1
+  │  └─WEB-INF
+  │     │ web.xml
+  │     └─lib
+  ├─Wtest3
+  │  └─wtest3_1
+  ├─Wtest4
+  │  ├─2
+  │  │  └─1
+  │  │     └─1
+  │  │        └─1
+  │  │            1.txt
+  │  │            2.txt
+  │  │            3.txt
+  │  └─3
+  └─Wtest5
+      1.txt
+      2.txt
+
+
+
+0 min
+0 s
+44 ms
+
