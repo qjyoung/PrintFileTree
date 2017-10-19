@@ -6,6 +6,6 @@ This is a plain java project , not a java web project , I copied the directories
 About the project:
 
 
-The reason I created this project is to list all files under the certain directory with the style in the picture.
+The purpose I created this project is to list all files under a certain directory with the style in the picture.
 
 ![the directory tree printed screenshots shown here](https://github.com/anuoQ/PrintFileTree/tree/master/Screenshots/1.png)
