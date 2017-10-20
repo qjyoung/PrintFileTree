@@ -26,7 +26,7 @@ class FileWrapper /*extends File*/ {
 
 	/*
 	 * 写在这里相当于一个递归,当程序启动时
-	   FileWrapper fileWrapper = new FileWrapper(file, hasNoDirBros);
+	   FileWrapper fileWrapper = new FileWrapper(file, isSingle);
 	 * 这句会一直执行下去,直到根文件夹下所有文件对象都被new出来
 	 * 可能会导致堆溢出
 	 * 但我试了遍历D盘,打印65万行,没有出现溢出
