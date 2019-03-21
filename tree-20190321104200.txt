@@ -1,0 +1,123 @@
+─PrintFileTree
+  │ tree-20190321104200.txt
+  │ README.md
+  │ .gitignore
+  │ Tree.iml
+  ├─giant
+  │   merida.txt
+  │   ucc.txt
+  ├─Screenshots
+  │   1.png
+  ├─bin/top/qjyoung/qtree
+  │  ├─util
+  │  │   FileWrapper.class
+  │  │   QTree.class
+  │  │   FileWrapper$1.class
+  │  ├─dao
+  │  │   UserDao.class
+  │  └─pojo
+  │      Address.class
+  │      User.class
+  ├─specialized/trek/cervelo/look/java
+  │   bianchi.txt
+  │   vue.txt
+  │   garmin.txt
+  ├─.git
+  │  │ config
+  │  │ HEAD
+  │  │ description
+  │  │ index
+  │  │ packed-refs
+  │  │ COMMIT_EDITMSG
+  │  ├─objects
+  │  │  ├─9e
+  │  │  │   eb968798557ea8049cd435b5b648694ec100bd
+  │  │  ├─04
+  │  │  │   83dde0d884e3ee47204b24b568389f2c230102
+  │  │  ├─a2
+  │  │  │   43e74aca62a4d37f18ec8a3bc5a97ac43e08ac
+  │  │  ├─pack
+  │  │  │   pack-3ad617ae035e5f290521d11e1953691ff03a6b5d.idx
+  │  │  │   pack-3ad617ae035e5f290521d11e1953691ff03a6b5d.pack
+  │  │  ├─1a
+  │  │  │   286f4ec0844a385efb4e9fa48b7a2f04f97857
+  │  │  ├─44
+  │  │  │   427114245e347d65b6df2bea84753f5e791ce2
+  │  │  ├─43
+  │  │  │   bf932914d176a502602a2a719142107f2d0404
+  │  │  ├─info
+  │  │  └─14
+  │  │      bf2ef031674b4fc4b648f41ee2d1bed9445ca7
+  │  ├─info
+  │  │   exclude
+  │  ├─logs
+  │  │  │ HEAD
+  │  │  └─refs
+  │  │     ├─heads
+  │  │     │   master
+  │  │     └─remotes/origin
+  │  │         HEAD
+  │  │         master
+  │  ├─hooks
+  │  │   commit-msg.sample
+  │  │   pre-rebase.sample
+  │  │   pre-commit.sample
+  │  │   applypatch-msg.sample
+  │  │   fsmonitor-watchman.sample
+  │  │   pre-receive.sample
+  │  │   prepare-commit-msg.sample
+  │  │   post-update.sample
+  │  │   pre-applypatch.sample
+  │  │   pre-push.sample
+  │  │   update.sample
+  │  ├─refs
+  │  │  ├─heads
+  │  │  │   master
+  │  │  ├─tags
+  │  │  └─remotes/origin
+  │  │      HEAD
+  │  │      master
+  │  └─branches
+  ├─孙悟空
+  │  ├─布尔玛/龟仙人
+  │  │  │ 123.txt
+  │  │  ├─小林
+  │  │  │   abc.txt
+  │  │  │   cba.txt
+  │  │  └─天津饭
+  │  │     │ q.txt
+  │  │     ├─比克大魔王/比克
+  │  │     │   贝吉塔.txt
+  │  │     │   231.txt
+  │  │     │   321.txt
+  │  │     └─test4
+  │  │         xyz.txt
+  │  ├─META-INF
+  │  │   MANIFEST.MF
+  │  └─WEB-INF
+  │      web.xml
+  ├─.idea
+  │  │ dbnavigator.xml
+  │  │ vcs.xml
+  │  │ workspace.xml
+  │  │ modules.xml
+  │  │ .name
+  │  │ misc.xml
+  │  └─codeStyles
+  │      Project.xml
+  └─src/top/qjyoung/qtree
+     ├─util
+     │   QTree.java
+     │   FileWrapper.java
+     ├─dao
+     │   UserDao.java
+     └─pojo
+         User.java
+         Address.java
+
+
+
+0 min
+0 s
+32 ms
+
