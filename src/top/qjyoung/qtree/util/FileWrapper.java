@@ -1,7 +1,6 @@
 package top.qjyoung.qtree.util;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,16 +63,12 @@ class FileWrapper /*extends File*/ {
     
     public void init() {
         //---得到所有子文件,并分类放入不同list
-        File[] totalFiles = file.listFiles(new FilenameFilter() {
-            
-            @Override
-            public boolean accept(File dir, String name) {
-                return true/*!name.equals("bin")*/;
-            }
+        File[] totalFiles = file.listFiles((dir, name) -> {
+            return true/*!name.equals("bin")*/;
         });
         
         if (totalFiles != null) {
-            boolean isSingle = totalFiles.length == 1 ? true : false;
+            boolean isSingle = totalFiles.length == 1;
             for (File file : totalFiles) {
                 if (file.isDirectory()) {
                     FileWrapper fileWrapper = new FileWrapper(file, isSingle);
