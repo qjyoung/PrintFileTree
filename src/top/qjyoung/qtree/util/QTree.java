@@ -146,13 +146,15 @@ public class QTree {
             FileWrapper fileWrapperSon = dirs.get(j);
             List<Boolean> flagsTemp = new ArrayList<>(flags);
             
-            // 如果折叠, 并且是独子(dirsSize==1), 下面不执行(不需标记), 反之执行(原因:将多级单一文件夹看成一个, 整体标记跟随此行第一个文件夹)
-            if (!(COLLAPSE && fileWrapperSon.isSingle()))
+            // 如果折叠, 并且是独子(dirsSize==1), 下面不执行(不需标记),
+            // 反之执行(原因:将多级单一文件夹看成一个, 整体标记跟随此行第一个文件夹)
+            if (!(COLLAPSE && fileWrapperSon.isSingle())) {
                 if (j == dirsSize - 1) { // 最后一个
                     flagsTemp.add(false);
                 } else {
                     flagsTemp.add(true);
                 }
+            }
             fileWrapperSon.setFlags(flagsTemp);
             print(fileWrapperSon, print);
         }
