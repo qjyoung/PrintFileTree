@@ -98,16 +98,16 @@ public class QTree {
             for (int i = 0; i <= flags.size() - 1; i++) { // 这块比较难理解，也是核心代码！！！
                 prefix.append(SPACE);
                 if (i == flags.size() - 1) { // 特殊处理: 最后一个记录, 也就是当前文件对象
-                    if (flags.get(i)) { // 如果不是小儿子true
+                    if (flags.get(i)) { // 中间孩子节点 true
                         prefix.append("├");
                     } else {
-                        prefix.append("└"); // 小儿子
+                        prefix.append("└"); // 小儿子 false
                     }
                     break; // 循环结束
                 }
-                if (flags.get(i)) { // (祖先)非小儿子true
+                if (flags.get(i)) { // (祖先)中间节点true非小儿子
                     prefix.append("│");
-                } else {
+                } else { // (祖先)小儿子节点false
                     prefix.append(" ");
                 }
             }
@@ -125,7 +125,7 @@ public class QTree {
         StringBuilder prefix = new StringBuilder();
         for (int i = 0; i <= flags.size() - 1; i++) {
             prefix.append(SPACE);
-            if (flags.get(i)) { // 他的爸爸不是小儿子
+            if (flags.get(i)) { // 他的爸爸是中间节点
                 prefix.append("│");
             } else {
                 prefix.append(" "); // 他的爸爸是小儿子
@@ -149,10 +149,10 @@ public class QTree {
             // 如果折叠, 并且是独子(dirsSize==1), 下面不执行(不需标记),
             // 反之执行(原因:将多级单一文件夹看成一个, 整体标记跟随此行第一个文件夹)
             if (!(COLLAPSE && fileWrapperSon.isSingle())) {
-                if (j == dirsSize - 1) { // 最后一个
+                if (j == dirsSize - 1) { // 最后一个，即小儿子
                     flagsTemp.add(false);
                 } else {
-                    flagsTemp.add(true);
+                    flagsTemp.add(true); // 中间儿子
                 }
             }
             fileWrapperSon.setFlags(flagsTemp);

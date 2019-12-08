@@ -14,7 +14,9 @@ import java.util.List;
 */
 class FileWrapper /*extends File*/ {
     private File file;
-    // 标记是不是小儿子(最后一个被遍历到)
+    // 标记是不是中间孩子节点(true是中间孩子节点，false末尾孩子节点)
+    // 两个用途，一是决定每个孩子节点之前的前缀排列情况。即每个位置上是树杠"|"还是空格" "
+    // 二是决定每个孩子节点紧前的符号是"├"还是"└"，true为"├"false为"└"
     private List<Boolean> flags = new ArrayList<>();
     // 所有文件夹
     private List<FileWrapper> dirs = new ArrayList<>();
