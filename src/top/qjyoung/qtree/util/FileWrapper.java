@@ -12,7 +12,7 @@ import java.util.List;
 	
 	先打印纯文件,在遍历文件夹
 */
-class FileWrapper /*extends File*/ {
+public class FileWrapper /*extends File*/ {
     private File file;
     // 标记是不是中间孩子节点(true是中间孩子节点，false末尾孩子节点)
     // 两个用途，一是决定每个孩子节点之前的前缀排列情况。即每个位置上是树杠"|"还是空格" "
